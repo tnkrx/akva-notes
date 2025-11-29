@@ -1,36 +1,60 @@
 /* ============================================
-   Reset seguro — NÃO altera layout padrão
-   Apenas remove a barra e ajusta espaçamentos
-=============================================== */
+   Sidebar limpa + moderna (light & dark mode)
+   Compatível com Hextra original
+============================================ */
 
-/* Remove a barra vertical do submenu */
+/* Remove linha vertical padrão */
 .hextra-sidebar-container .hextra-sidebar-active-item::before,
 .hextra-sidebar-container li::before {
   display: none !important;
 }
 
-/* Ajuste de indentação do submenu */
+/* Padroniza espaçamentos de listas */
 .hextra-sidebar-container ul {
-  border-left: none !important;
-  margin-left: 14px !important;
+  margin-left: 12px !important;
   padding-left: 0 !important;
+  border-left: none !important;
 }
 
-/* Links normais */
+/* -------- Links gerais -------- */
 .hextra-sidebar-container a {
-  padding: 6px 4px;
-  border-radius: 6px;
-  transition: background 0.15s ease;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.93rem;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-/* Hover normal */
+/* Hover — discreto e elegante */
 .hextra-sidebar-container a:hover {
   background: var(--gray-2);
+  color: var(--link-color-hover);
 }
 
-/* Item ativo */
+/* -------- Parent (item com dropdown) -------- */
+.hextra-sidebar-container .hextra-sidebar-parent > a {
+  font-weight: 600;
+  color: var(--gray-11);
+}
+
+/* Parent aberto (dropdown ativo) */
+.hextra-sidebar-container .hextra-sidebar-parent-open > a {
+  color: var(--link-color);
+}
+
+/* -------- Item ativo -------- */
 .hextra-sidebar-active-item > a {
   background: var(--gray-3) !important;
   color: var(--link-color) !important;
   font-weight: 600;
+}
+
+/* -------- Subitens -------- */
+.hextra-sidebar-container .hextra-sidebar-child a {
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+
+.hextra-sidebar-container .hextra-sidebar-child a:hover {
+  opacity: 1;
 }
