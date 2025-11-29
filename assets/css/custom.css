@@ -1,0 +1,60 @@
+/* ================================
+   🔥 SIDEBAR CONTAINER (Fundo)
+   ================================ */
+.hextra-sidebar-container {
+  background: rgba(10, 10, 15, 0.94);   /* fundo dark premium */
+  border-right: 1px solid rgba(255, 245, 150, 0.18);
+  padding: 20px 18px;
+  backdrop-filter: blur(6px);
+}
+
+/* ================================
+   🔥 ITENS DO SIDEBAR
+   ================================ */
+
+.hextra-sidebar-container a,
+.hextra-sidebar-container summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(25,25,35,0.85), rgba(15,15,25,0.7));
+  border: 1px solid rgba(255,245,150,0.12);
+
+  color: #dcdcdc;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+/* ================================
+   🔥 HOVER – Cyber Glow
+   ================================ */
+.hextra-sidebar-container a:hover,
+.hextra-sidebar-container summary:hover {
+  border-color: #f5d742;
+  color: #f5d742;
+  box-shadow: 0 0 12px rgba(245,215,66,0.45);
+  transform: translateX(4px);
+}
+
+/* ================================
+   🔥 ITEM ATIVO (hextra-sidebar-active-item)
+   ================================ */
+.hextra-sidebar-active-item {
+  border-color: #f5d742 !important;
+  color: #f5d742 !important;
+  background: rgba(245,215,66,0.12) !important;
+  box-shadow: 0 0 14px rgba(245,215,66,0.4) !important;
+  font-weight: 600;
+}
+
+/* Remove o highlight azul padrão */
+.hextra-sidebar-active-item::before {
+  display: none !important;
+}
