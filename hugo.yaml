@@ -18,13 +18,13 @@ markup:
 
 menu:
   main:
-    - name: About
+    - name: Sobre
       pageRef: /about
       weight: 2
-    - name: Contact ↗
+    - name: Contato ↗
       url: "/"
       weight: 3
-    - name: Search
+    - name: Pesquisa
       weight: 4
       params:
         type: search
