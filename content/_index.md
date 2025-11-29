@@ -2,7 +2,8 @@
 title: AKVA - Notes
 toc: false
 ---
-
+cascade:
+  type: docs
 ---
 
 Bem-vindo ao **AKVA – Pentest Notes**, meu repositório central de estudos, anotações e referências sobre **segurança ofensiva, pentesting e red teaming**.  
