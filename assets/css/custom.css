@@ -1,57 +1,36 @@
-/* -------------------------------------------------------
-   Sidebar Minimal Clean Theme
-------------------------------------------------------- */
+/* ============================================
+   Reset seguro — NÃO altera layout padrão
+   Apenas remove a barra e ajusta espaçamentos
+=============================================== */
 
-/* Sidebar container */
-.hextra-sidebar-container {
-  padding: 18px 14px;
+/* Remove a barra vertical do submenu */
+.hextra-sidebar-container .hextra-sidebar-active-item::before,
+.hextra-sidebar-container li::before {
+  display: none !important;
 }
 
-/* Parent (summary) */
-.hextra-sidebar-container summary {
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.15s ease;
-}
-
-/* Hover no parent */
-.hextra-sidebar-container summary:hover {
-  background: var(--gray-2);
-}
-
-/* Submenu list */
+/* Ajuste de indentação do submenu */
 .hextra-sidebar-container ul {
-  margin-left: 8px !important;
+  border-left: none !important;
+  margin-left: 14px !important;
   padding-left: 0 !important;
-  border-left: 1px solid var(--gray-4);
 }
 
-/* Child (links) */
-.hextra-sidebar-container ul li a {
-  display: block;
-  padding: 8px 12px;
-  margin: 4px 0;
+/* Links normais */
+.hextra-sidebar-container a {
+  padding: 6px 4px;
   border-radius: 6px;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.15s ease;
 }
 
-/* Hover nos filhos */
-.hextra-sidebar-container ul li a:hover {
+/* Hover normal */
+.hextra-sidebar-container a:hover {
   background: var(--gray-2);
 }
 
-/* Item ativo (parent ou child) */
-.hextra-sidebar-active-item,
+/* Item ativo */
 .hextra-sidebar-active-item > a {
   background: var(--gray-3) !important;
   color: var(--link-color) !important;
-  border-radius: 6px;
   font-weight: 600;
-}
-
-/* Remove aquela barra vertical da Hextra */
-.hextra-sidebar-active-item::before {
-  display: none !important;
 }
