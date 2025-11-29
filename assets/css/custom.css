@@ -1,60 +1,69 @@
-/* ============================================
-   Sidebar limpa + moderna (light & dark mode)
-   Compatível com Hextra original
-============================================ */
+/* RESET — Garante que estilos antigos não interfiram */
+.hextra-sidebar-container *,
+.hextra-sidebar-container *::before,
+.hextra-sidebar-container *::after {
+  all: revert !important;
+}
 
-/* Remove linha vertical padrão */
-.hextra-sidebar-container .hextra-sidebar-active-item::before,
+/* ============================================
+   SIDEBAR – Corporate Style (Clean + Profissional)
+   ============================================ */
+
+/* Container mais sofisticado */
+.hextra-sidebar-container {
+  background: var(--gray-1);
+  padding: 20px 16px;
+  border-right: 1px solid var(--gray-3);
+}
+
+/* Título de seção (Web Exploitation, etc.) */
+.hextra-sidebar-container .hextra-sidebar-active-group > a,
+.hextra-sidebar-container .hextra-sidebar-group > a {
+  font-weight: 600;
+  color: var(--gray-12);
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gray-2);
+  transition: all 0.2s ease;
+}
+
+/* Hover nos grupos */
+.hextra-sidebar-container .hextra-sidebar-group > a:hover {
+  background: var(--gray-3);
+}
+
+/* Item ativo */
+.hextra-sidebar-active-item > a {
+  background: rgba(0, 120, 220, 0.12) !important; /* Azul corporativo suave */
+  color: rgb(0, 110, 205) !important;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Itens normais do submenu */
+.hextra-sidebar-container li a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--gray-11);
+  transition: all 0.2s ease;
+}
+
+/* Hover no submenu */
+.hextra-sidebar-container li a:hover {
+  background: var(--gray-3);
+}
+
+/* Remover aquela barra vertical chata */
 .hextra-sidebar-container li::before {
   display: none !important;
 }
 
-/* Padroniza espaçamentos de listas */
+/* Submenu indentado leve e elegante */
 .hextra-sidebar-container ul {
-  margin-left: 12px !important;
-  padding-left: 0 !important;
+  margin-left: 12px;
+  padding-left: 0;
   border-left: none !important;
-}
-
-/* -------- Links gerais -------- */
-.hextra-sidebar-container a {
-  display: block;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-size: 0.93rem;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-/* Hover — discreto e elegante */
-.hextra-sidebar-container a:hover {
-  background: var(--gray-2);
-  color: var(--link-color-hover);
-}
-
-/* -------- Parent (item com dropdown) -------- */
-.hextra-sidebar-container .hextra-sidebar-parent > a {
-  font-weight: 600;
-  color: var(--gray-11);
-}
-
-/* Parent aberto (dropdown ativo) */
-.hextra-sidebar-container .hextra-sidebar-parent-open > a {
-  color: var(--link-color);
-}
-
-/* -------- Item ativo -------- */
-.hextra-sidebar-active-item > a {
-  background: var(--gray-3) !important;
-  color: var(--link-color) !important;
-  font-weight: 600;
-}
-
-/* -------- Subitens -------- */
-.hextra-sidebar-container .hextra-sidebar-child a {
-  font-size: 0.88rem;
-  opacity: 0.9;
-}
-
-.hextra-sidebar-container .hextra-sidebar-child a:hover {
-  opacity: 1;
 }
