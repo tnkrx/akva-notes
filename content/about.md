@@ -1,6 +1,8 @@
 ---
 title: Sobre
 type: about
+sidebar:
+  exclude: true
 ---
 
 O **AKVA - Field Manual** é o meu repositório pessoal de conhecimento sobre **segurança ofensiva, pentesting e red teaming**.
