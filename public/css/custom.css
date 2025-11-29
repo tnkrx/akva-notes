@@ -1,0 +1,46 @@
+/* ===== Sidebar Melhorado ===== */
+
+.hextra-sidebar {
+  border-right: 1px solid rgba(255,255,255,0.05);
+  padding-top: 1rem;
+}
+
+/* Links principais */
+.hextra-sidebar .menu-link {
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+.hextra-sidebar .menu-link:hover {
+  background: rgba(100,150,255,0.15);
+  color: #70a5ff;
+}
+
+/* Ícones maiores */
+.hextra-sidebar svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Subitens */
+.hextra-sidebar .submenu-link {
+  padding-left: 32px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.hextra-sidebar .submenu-link:hover {
+  color: #70a5ff;
+}
+
+/* Item ativo */
+.hextra-sidebar .active {
+  background: rgba(80,120,255,0.25) !important;
+  color: #d0e0ff !important;
+}
